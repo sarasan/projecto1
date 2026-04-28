@@ -2,7 +2,7 @@ package com.example;
 
 import javax.swing.JOptionPane;
 
-class Pessoa{
+/*class Pessoa{
 
     String nome;
 
@@ -14,7 +14,7 @@ class Pessoa{
 
         System.out.println("Idade: " + idade);
     }
-}
+}*/
 
 
 
@@ -23,7 +23,7 @@ public class Main {
         //System.out.println("Hello world!");
 
 //instancia objecto
-        Pessoa P = new Pessoa();
+        /*Pessoa P = new Pessoa();
 
         P. nome = "sara";
 
@@ -32,6 +32,34 @@ public class Main {
 
         P.idade = 34;
 
-        P.MostrarDados();
+        P.MostrarDados();*/
+
+
+         /*float Numero1 = JOptionPane.showInputDialog("Introduza o primeiro numero:");
+        
+        // Create a JOptionPane to display a message with a personalized greeting
+      
+        JOptionPane.showMessageDialog(null, "GFG " + Numero1 + "!");
+
+           float Numero2 = JOptionPane.showInputDialog("Introduza o primeiro numero:");
+        
+        // Create a JOptionPane to display a message with a personalized greeting
+      
+        JOptionPane.showMessageDialog(null, "GFG " + Numero1 + "!");*/
+
+     
+        String input = JOptionPane.showInputDialog("Please enter an integer:");
+ 
+        try {
+            // Convert the string to an integer
+            int number = Integer.parseInt(input);
+            // Display the result
+            JOptionPane.showMessageDialog(null, "You entered: " + number);
+        } catch (NumberFormatException e) {
+            // Handle the case where the input is not a valid integer
+            JOptionPane.showMessageDialog(null, "Invalid input. Please enter a valid integer.");
+        }
     }
-}
+} 
+
+    
