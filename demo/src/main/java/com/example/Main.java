@@ -27,7 +27,8 @@ public class Main {
 
         P. nome = "sara";
 
-        
+        //String name = JOptionPane.showInputDialog("What is your name?");
+
 
         P.idade = 34;
 
