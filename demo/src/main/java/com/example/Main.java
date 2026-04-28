@@ -2,6 +2,8 @@ package com.example;
 
 import javax.swing.JOptionPane;
 
+import com.Calculadora;
+
 /*class Pessoa{
 
     String nome;
@@ -47,19 +49,58 @@ public class Main {
       
         JOptionPane.showMessageDialog(null, "GFG " + Numero1 + "!");*/
 
+        ////////////////////////////////////////
+        /// 
+        /// 
+        Calculadora calc = new Calculadora();
+
      
-        String input = JOptionPane.showInputDialog("Please enter an integer:");
+        String input = JOptionPane.showInputDialog("Please enter first integer:");
  
-        try {
+        //try {
             // Convert the string to an integer
             int number = Integer.parseInt(input);
+
+           String input2 = JOptionPane.showInputDialog("Please enter first integer:");
+
+            int number2 = Integer.parseInt(input2);
+
             // Display the result
-            JOptionPane.showMessageDialog(null, "You entered: " + number);
-        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "You entered: " + number + "and" + number2);
+
+            String option = JOptionPane.showInputDialog("Please choose the  operation:1\n1:Somar\n2:Subtrair\n3:Multiplicar\n4:Dividir");
+
+        //} catch (NumberFormatException e) {
             // Handle the case where the input is not a valid integer
-            JOptionPane.showMessageDialog(null, "Invalid input. Please enter a valid integer.");
+            //JOptionPane.showMessageDialog(null, "Invalid input. Please enter a valid integer.");
+
+            switch (option) {
+                case "1":
+                    JOptionPane.showMessageDialog(null, "Soma: " +  calc.Somar(number,number2) );
+
+                    
+                    break;
+
+                    case "2":
+                     calc.Subtracao(number, number2);
+                    
+                    break;
+
+                    case "3":
+                     calc.Multiplicar(number,number2);
+                    
+                    break;
+
+                    case "4":
+                     calc.Dividir(number,number2);
+                    
+                    break;
+            
+                default:
+                    break;
+            }
         }
     }
-} 
+
 
     
