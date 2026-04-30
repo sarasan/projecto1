@@ -21,7 +21,7 @@ public class Calculadora {
 
      public float getNumero2(){
 
-        return Numero2;
+        return (this.Numero2);
     }
 
     public void setNumero2(float Numero2){
