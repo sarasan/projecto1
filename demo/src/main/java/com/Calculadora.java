@@ -39,7 +39,7 @@ public class Calculadora {
     }
 
 
-    public float Subtracao(float num1, float num2){
+    public float Subtrair(float num1, float num2){
 
         float subtracao = num1 - num2;
 
