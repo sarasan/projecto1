@@ -4,33 +4,28 @@ import javax.swing.JOptionPane;
 
 public class Carro extends Veiculo {
 
-    private int  portas;
+    private int portas;
 
-   /* public Veiculo(String marca, String modelo, int  ano,
-    float preco, String Velocidade, int Patas, String Alimento){
-        super(Nome, Cor, Ambiente, Comprimento, Velocidade, Patas);
-        this.Alimento=Alimento;
-    
-}
+    public Carro(String marca, String modelo, int ano, float preco, String combustivel, int velocidade_maxima, int portas) {
 
-public class Mamiferos extends Animais{
-    private String Alimento;
-        
-    public Mamiferos(String Nome, String Cor, String Ambiente,
-    float Comprimento, float Velocidade, int Patas, String Alimento){
-        super(Nome, Cor, Ambiente, Comprimento, Velocidade, Patas);
-        this.Alimento=Alimento;
+        super(marca, modelo, ano, preco, combustivel,velocidade_maxima);
+
+        this.portas = portas;
     }
 
-    public String getAlimento(){
-        return(this.Alimento);
+    public int getPortas() {
+
+        return (this.portas);
     }
-    public void setAlimento(String Alimento){
-        this.Alimento=Alimento;
+
+    public void setPortas(int portas) {
+
+        this.portas = portas;
     }
-    public void DadosMamiferos(){
-        super.MostraDados();
-        JOptionPane.showMessageDialog(null, "Alimento:"+
-        this.Alimento,"Classe Mamiferos",JOptionPane.INFORMATION_MESSAGE);
-    }*/
+
+    public void MostrarDadosCarro() {
+        super.MostrarDados();
+        JOptionPane.showMessageDialog(null, "portas:" +
+                this.portas, "Classe Carro", JOptionPane.INFORMATION_MESSAGE);
+    }
 }
