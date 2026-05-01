@@ -101,7 +101,7 @@ public class Veiculo {
         "\nAno:"+this.ano+
         "\nCombustivel:"+this.combustivel+
         "\nVelocidade:"+this.velocidade_maxima+
-        "\nPreço:"+this.preco,"Classe Animais",JOptionPane.INFORMATION_MESSAGE
+        "\nPreço:"+this.preco,"Classe Veiculo",JOptionPane.INFORMATION_MESSAGE
         );
     }
 
