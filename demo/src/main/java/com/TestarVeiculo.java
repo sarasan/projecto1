@@ -6,7 +6,7 @@ public class TestarVeiculo {
 
     public static void main(String[] args){
 
-    Veiculo jipe = new Veiculo("Range Rover", "XPTO 20",2000, 20.000, "Gas´oleo", 240);
+    Veiculo jipe = new Veiculo("Range Rover", "XPTO 20",2000, 20.000f, "Gas´oleo", 240);
 
 }
     
