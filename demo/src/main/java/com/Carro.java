@@ -24,8 +24,9 @@ public class Carro extends Veiculo {
     }
 
     public void MostrarDadosCarro() {
+
         super.MostrarDados();
-        JOptionPane.showMessageDialog(null, "portas:" +
+        JOptionPane.showMessageDialog(null, "Portas:" +
                 this.portas, "Classe Carro", JOptionPane.INFORMATION_MESSAGE);
     }
 }

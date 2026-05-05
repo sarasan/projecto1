@@ -26,7 +26,7 @@ public class Aviao extends Veiculo {
 
     public void MostrarDadosAviao() {
         super.MostrarDados();
-        JOptionPane.showMessageDialog(null, "tipodeAsa:" +
+        JOptionPane.showMessageDialog(null, "Tipo de Asa:" +
                 this.tipodeAsa, "Classe Aviao", JOptionPane.INFORMATION_MESSAGE);
     }
 
