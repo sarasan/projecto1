@@ -8,7 +8,7 @@ public class TestarViaturas{
         String Matricula, Marca, Combustivel;
         float Preco;
 
-        String[] Opcoes = { "Adicionar", "Eliminar", "Listagem", "Listagem Por Marca","Sair" };
+        String[] Opcoes = { "Adicionar", "Eliminar", "Listagem", "Listagem Por Marca","ListagemTotPreco","Sair"};
         Dados D = new Dados();
 
         do {
@@ -17,7 +17,8 @@ public class TestarViaturas{
                     "Gestão de viaturas",
                     JOptionPane.OK_CANCEL_OPTION,
                     JOptionPane.PLAIN_MESSAGE, null, Opcoes, null);
-            if (Escolha == 4)
+
+            if (Escolha == 5)
                 break;
 
             switch (Escolha) {
@@ -31,6 +32,8 @@ public class TestarViaturas{
                 "Adicionar viatura", JOptionPane.INFORMATION_MESSAGE);
                        
                     }
+
+
                     else{        
                     Marca = JOptionPane.showInputDialog(null,
                             "Digite a marca do viatura  \n");
@@ -62,9 +65,11 @@ public class TestarViaturas{
                 case 2 -> D.ListagemViaturas();
 
                 case 3 -> D.ListagemViaturasPorMarca();
+
+                case 4 -> D.ListagemTotPreco();
             }
 
-        } while (Escolha != 4);
+        } while (Escolha != 5);
 
     }
 }
