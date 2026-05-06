@@ -23,7 +23,7 @@ public class TestarViaturas{
             switch (Escolha) {
                 case 0 -> {
                     Matricula = JOptionPane.showInputDialog(null,
-                            "Digite a Matricula do viatura");
+                            "Digite a Matricula da viatura");
 
                     if(D.ViaturaJaExiste(Matricula)){
 
@@ -33,19 +33,19 @@ public class TestarViaturas{
                     }
                     else{        
                     Marca = JOptionPane.showInputDialog(null,
-                            "Digite oa marca do viatura");
+                            "Digite a marca do viatura  \n");
 
                     Matricula = JOptionPane.showInputDialog(null,
-                            "Digite o matricula viatura");
+                            "Digite a matricula viatura\n");
 
                     Combustivel=JOptionPane.showInputDialog(null,
-                            "Digite o matricula viatura");
+                            "Digite o combustivel viatura\n");
 
                     Preco = Float.parseFloat(JOptionPane.showInputDialog(null,
-                            "Digite o preco viatura"));
+                            "Digite o preco viatura\n"));
 
                     KilometrosAtuais = Integer.parseInt(JOptionPane.showInputDialog(null,
-                            "Digite o kilometros viatura"));
+                            "Digite o kilometros viatura\n"));
 
 
                     Viaturas V = new Viaturas(Marca, Matricula, Combustivel, Preco,KilometrosAtuais);
