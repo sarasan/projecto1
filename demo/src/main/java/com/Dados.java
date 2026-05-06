@@ -10,6 +10,7 @@ public class Dados {
 private ArrayList<Viaturas> ListaViaturas = new ArrayList<>();
 
   public boolean ViaturaJaExiste(String Matricula){
+    
         for(Viaturas x:ListaViaturas){
             if(x.getMatricula()==Matricula){
                 return(true);             
@@ -46,16 +47,34 @@ private ArrayList<Viaturas> ListaViaturas = new ArrayList<>();
                 "Listagem de Viaturas", JOptionPane.INFORMATION_MESSAGE); 
                 return;           
         }
-        String Saida = "";
+        String SaidaViaturas = "";
         for (int i = 0; i < ListaViaturas.size(); i++) {
             Viaturas V = ListaViaturas.get(i);
-            Saida += "\nMarca:" + V.getMarca() + " | \nMatricula:" + V.getMatricula() +
-                    " | \nCombustivel:" + V.getCombustivel() + " | \nKilometros actuais:" + 
-                    V.getKilometrosAtuais() + ;
+            SaidaViaturas += "\nMarca:" + V.getMarca() + " | \nMatricula:" + V.getMatricula() +
+                    " | \nCombustivel:" + V.getCombustivel() + "Kilometros Atuais:  "+ V.getKilometrosAtuais()+
+                    " | \npreco:" + 
+                    V.getPreco() ;
         }
-        JOptionPane.showMessageDialog(null, Saida,
-                "Listagem de Alunos", JOptionPane.INFORMATION_MESSAGE);
-}}
+        JOptionPane.showMessageDialog(null, SaidaViaturas,
+                "Listagem de Viaturas", JOptionPane.INFORMATION_MESSAGE);
+}
+        
+
+  public void ListagemViaturasPorMarca() {
+        if(ListaViaturas.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Não existem viaturas",
+                "Listagem de Viaturas", JOptionPane.INFORMATION_MESSAGE); 
+                return;           
+        }
+        String SaidaPorMarca= "";
+        for (int i = 0; i < ListaViaturas.size(); i++) {
+            Viaturas V = ListaViaturas.get(i);
+            SaidaPorMarca += "\nMarca:" + V.getMarca();
+        }
+        JOptionPane.showMessageDialog(null, SaidaPorMarca,
+                "Listagem de Viaturas", JOptionPane.INFORMATION_MESSAGE);
+}
+}
 /* private String Marca;
 
     private String Matricula;

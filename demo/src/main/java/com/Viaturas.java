@@ -16,7 +16,7 @@ public class Viaturas {
 
   
 
-    public Viaturas(String Marca, String Matricula,  String Combustivel, int KilometrosAtuais ,float Preco){
+    public Viaturas(String Marca, String Matricula,  String Combustivel,float Preco,int KilometrosAtuais ){
 
         this.Marca = Marca;
 
@@ -77,9 +77,15 @@ public class Viaturas {
 
 
 
-    public int getKilometrosAtuais(int KilometrosAtuais){
+    public int getKilometrosAtuais(){
 
         return (this.KilometrosAtuais);
+
+    }
+
+    public void setKilometrosAtuais(int KilometrosAtuais){
+
+        this.KilometrosAtuais = KilometrosAtuais;
     }
 
    /*  public void MostrarDados(){
