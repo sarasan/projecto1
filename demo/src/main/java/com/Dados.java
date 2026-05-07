@@ -11,7 +11,7 @@ public class Dados {
     public boolean ViaturaJaExiste(String Matricula) {
 
         for (Viaturas y:ListaViaturas) {
-            if (y.getMatricula() == Matricula) {
+            if (y.getMatricula().equals(Matricula)) {
                 return (true);
             }
         }
@@ -64,11 +64,12 @@ public class Dados {
                 ListaViaturas.remove(i);
                 JOptionPane.showMessageDialog(null, "Viatura eliminada",
                         "Eliminar viatura", JOptionPane.INFORMATION_MESSAGE);
+                        return;
                 
-            } else
+            } //else
 
-                JOptionPane.showMessageDialog(null, "Matricula de viatura inexistente",
-                        "Eliminar viatura", JOptionPane.INFORMATION_MESSAGE);
+               // JOptionPane.showMessageDialog(null, "Matricula de viatura inexistente",
+                       // "Eliminar viatura", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
