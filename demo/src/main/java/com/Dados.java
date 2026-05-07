@@ -10,7 +10,7 @@ public class Dados {
 
     public boolean ViaturaJaExiste(String Matricula) {
 
-        for (Viaturas y : ListaViaturas) {
+        for (Viaturas y:ListaViaturas) {
             if (y.getMatricula() == Matricula) {
                 return (true);
             }
@@ -64,28 +64,34 @@ public class Dados {
                 ListaViaturas.remove(i);
                 JOptionPane.showMessageDialog(null, "Viatura eliminada",
                         "Eliminar viatura", JOptionPane.INFORMATION_MESSAGE);
-                ;
-            }else
-        
-        JOptionPane.showMessageDialog(null, "Matricula de viatura inexistente",
-                "Eliminar viatura", JOptionPane.INFORMATION_MESSAGE);
+                
+            } else
+
+                JOptionPane.showMessageDialog(null, "Matricula de viatura inexistente",
+                        "Eliminar viatura", JOptionPane.INFORMATION_MESSAGE);
         }
     }
-    
-    
+
     public void ListagemTotPreco() {
         if (ListaViaturas.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Não existem viaturas",
                     "Listagem de Viaturas", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
-        String SaidaPorTPreco= "";
+        int SaidaPorTPreco = 0;
+
+        String SaidaViaturas = "";
+
         for (int i = 0; i < ListaViaturas.size(); i++) {
             Viaturas V = ListaViaturas.get(i);
-            SaidaPorTPreco += "\totalPrreco:" + V.getPreco();
+            SaidaViaturas += "\nMarca:" + V.getMarca() + " | \nMatricula:" + V.getMatricula() +
+                    " | \nCombustivel:" + V.getCombustivel() + "Kilometros Atuais:  " + V.getKilometrosAtuais() +
+                    " | \npreco:" +
+                    V.getPreco();
+            SaidaPorTPreco += V.getPreco();
         }
-        JOptionPane.showMessageDialog(null, SaidaPorTPreco,
+
+        JOptionPane.showMessageDialog(null, "Saida Viaturas\n" + SaidaViaturas + "Preço total: \n" + SaidaPorTPreco,
                 "Listagem de Viaturas", JOptionPane.INFORMATION_MESSAGE);
     }
 }
-
